@@ -3,7 +3,6 @@
 #include "it_2725.h"
 
 #include "it_266F.h"
-#include "it_26B1.h"
 #include "itcoll.h"
 
 #include "ef/efsync.h"
@@ -121,7 +120,6 @@
 #include "mp/mpcoll.h"
 
 #include <baselib/gobj.h>
-
 
 struct sdata_ItemGXLink it_803F2310[] = {
     it_8026EECC, it_8026EECC, it_8026EECC, it_8026EECC, it_8026EECC,
@@ -3154,8 +3152,6 @@ void it_80272674(Item_GObj* arg0, s32 idx)
     }
 }
 
-void it_8027129C(HSD_GObj*, u32); /* extern */
-
 extern inline void __func(HSD_GObj* arg0)
 {
     u32 i;
@@ -3765,256 +3761,6 @@ void it_80273670(Item_GObj* arg0, s32 arg1, f32 arg8)
     temp_r30->x52C_item_script = 0;
 }
 
-// TODO
-// extern char it_803F1F00[];
-// extern char it_803F1F0C[];
-// extern char it_804D5188;
-// extern char it_804D5190;
-// extern volatile f32 it_804DC708;
-// extern f32 it_804DC70C;
-// extern f32 it_804DC710;
-// extern f32 it_804DC714;
-// extern f64 it_804DC718;
-
-// void it_80273748(HSD_GObj* arg0, Vec3* arg1, Vec3* arg2)
-// {
-//     // register allocations correct so long as vars are in exactly this order
-//     HSD_JObj* temp_r3_2;
-//     f32 temp_f31;
-//     f32 temp_f31_2;
-//     f32 var_f0;
-//     f32 var_f1;
-//     s32 temp_r0;
-//     s32 _filler; // this var does nothing but removing it fucks up the register
-//                  // allocations
-//     s32 var_r4;
-//     Vec3 sp54;
-//     Vec3 sp48;
-//     Vec3 sp3C;
-//     HSD_JObj* jobj_2;
-//     Item* item_2;
-//     Item* item;
-//     HSD_GObj* owner;
-//     HSD_JObj* jobj;
-//     Item* temp_r3;
-//     s32 stack[10];
-
-//     item = arg0->user_data;
-//     jobj = arg0->hsd_obj;
-//     owner = item->owner;
-//     it_80275070(arg0,
-//                 item->xC4_article_data->x10_modelDesc->x8_bone_attach_id);
-//     if (it_8026B6C8((Item_GObj*) arg0) == 0) {
-//         it_8026B390((Item_GObj*) arg0);
-//     }
-//     it_802756E0(arg0);
-//     item_2 = arg0->user_data;
-//     jobj_2 = arg0->hsd_obj;
-//     temp_f31 = it_80274990(arg0);
-//     lb_8000B804(jobj_2, item_2->xC8_joint);
-//     Item_8026849C(arg0);
-//     it_80274658(arg0, temp_f31);
-//     if (item->xDC8_word.flags.x0) {
-//         owner = (HSD_GObj*) item->x51C;
-//     }
-//     item->x40_vel = *arg2;
-//     item->x40_vel.x *= item->xCC_item_attr->x4_throw_speed_mul;
-//     item->x40_vel.y *= item->xCC_item_attr->x4_throw_speed_mul;
-//     item->x40_vel.z *= item->xCC_item_attr->x4_throw_speed_mul;
-//     temp_r3 = arg0->user_data;
-//     var_f1 = temp_r3->x40_vel.x;
-//     if (var_f1 < it_804DC708) {
-//         var_f1 = -var_f1;
-//     }
-//     if (!(var_f1 < it_804DC70C) || (temp_r3->facing_dir == it_804DC708)) {
-//         if (temp_r3->x40_vel.x >= it_804DC708) {
-//             var_f0 = it_804DC710;
-//         } else {
-//             var_f0 = it_804DC714;
-//         }
-//         temp_r3->facing_dir = var_f0;
-//     }
-//     if (it_804DC714 == temp_r3->facing_dir) {
-//         var_r4 = -1;
-//     } else {
-//         var_r4 = 1;
-//     }
-//     mpColl_800436D8(&temp_r3->x378_itemColl, var_r4);
-//     if (((UnkFlagStruct*) ((u8*) item + 0xdcb))->bits.b1 == 1) {
-//         temp_f31_2 = (f32) (it_804DC718 * (f64) item->facing_dir);
-//         if (jobj == NULL) {
-//             __assert(&it_804D5188, 0x294U, &it_804D5190);
-//         }
-//         if (jobj->flags & 0x20000) {
-//             __assert(&it_804D5188, 0x295U, it_803F1F0C);
-//         }
-//         jobj->rotate.y = temp_f31_2;
-//         __80262DE4_inline(jobj);
-//     }
-//     if (((it_8026B2B4((Item_GObj*) arg0) == 1) &&
-//          (temp_r0 = item->hold_kind, ((temp_r0 == 4) == 0)) &&
-//          (temp_r0 != 6)) ||
-//         ((s32) item->hold_kind == 8))
-//     {
-//         temp_r3_2 = it_80272CC0(
-//             (Item_GObj*) arg0,
-//             ((Item*) arg0->user_data)
-//                 ->xC4_article_data->x10_modelDesc->x8_bone_attach_id);
-//         if (temp_r3_2 == NULL) {
-//             __assert(&it_804D5188, 0x3D3U, &it_804D5190);
-//         }
-//         sp3C = temp_r3_2->translate;
-//         sp3C.x = -sp3C.x;
-//         sp3C.y = -sp3C.y;
-//         sp3C.z = -sp3C.z;
-//         lb_8000B1CC(ftLib_80086630(owner, item->xDC4), &sp3C, &sp54);
-//         lb_8000B1CC(ftLib_80086630(owner, item->xDC4), NULL, &sp48);
-//         sp3C.x = sp54.x - sp48.x;
-//         sp3C.y = sp54.y - sp48.y;
-//         sp3C.z = it_804DC708;
-//     } else {
-//         sp3C.x = sp3C.y = sp3C.z = it_804DC708;
-//     }
-//     item->pos.x = (f32) (arg1->x + sp3C.x);
-//     item->pos.y = (f32) (arg1->y + sp3C.y);
-//     item->pos.z = (f32) it_804DC708;
-//     if (jobj == NULL) {
-//         __assert(&it_804D5188, 0x394U, &it_804D5190);
-//     }
-//     if (((u8*) item + 0x4c) == 0) {
-//         __assert(&it_804D5188, 0x395U, it_803F1F00);
-//     }
-//     jobj->translate = item->pos;
-//     __80262DE4_inline(jobj);
-// }
-
-// extern volatile f32 it_804DC708;
-// extern f32 it_804DC70C;
-// extern f32 it_804DC710;
-// extern f32 it_804DC714;
-// extern f64 it_804DC718;
-
-// void it_80273B50(HSD_GObj* arg0, Vec3* arg1)
-// {
-//     // register allocations are correct when vars declared in exactly this
-//     // order
-//     s32 stack_top[10];
-//     Item* temp_r31;
-//     HSD_GObj* var_r30;
-//     HSD_JObj* temp_r3_2;
-//     f32 temp_f31;
-//     f32 temp_f31_2;
-//     f32 var_f0;
-//     f32 var_f1;
-//     s32 temp_r0;
-//     Vec3 sp40;
-//     Vec3 sp34;
-//     s32 var_r4;
-//     Vec3* temp_r28;
-//     void* temp_r27;
-//     HSD_JObj* temp_r27_2;
-//     HSD_JObj* temp_r29;
-//     Item* temp_r3;
-//     Item* temp_r26;
-//     Item* temp_r26_2;
-//     s32 stack_bottom[9];
-
-//     temp_r31 = arg0->user_data;
-//     temp_r29 = arg0->hsd_obj;
-//     var_r30 = temp_r31->owner;
-//     it_80275070((Item_GObj*) arg0,
-//                 temp_r31->xC4_article_data->x10_modelDesc->x8_bone_attach_id);
-//     if (it_8026B6C8((Item_GObj*) arg0) == 0) {
-//         it_8026B390((Item_GObj*) arg0);
-//     }
-//     it_802756E0(arg0);
-//     temp_r26 = arg0->user_data;
-//     temp_r27 = arg0->hsd_obj;
-//     temp_f31 = it_80274990(arg0);
-//     lb_8000B804((HSD_JObj*) temp_r27, temp_r26->xC8_joint);
-//     Item_8026849C(arg0);
-//     it_80274658(arg0, temp_f31);
-//     if (temp_r31->xDC8_word.flags.x0) {
-//         var_r30 = (HSD_GObj*) temp_r31->x51C;
-//     }
-//     temp_r31->x40_vel = *arg1;
-//     temp_r31->x40_vel.x *= temp_r31->xCC_item_attr->x4_throw_speed_mul;
-//     temp_r31->x40_vel.y *= temp_r31->xCC_item_attr->x4_throw_speed_mul;
-//     temp_r31->x40_vel.z *= temp_r31->xCC_item_attr->x4_throw_speed_mul;
-//     temp_r3 = arg0->user_data;
-//     var_f1 = temp_r3->x40_vel.x;
-//     if (var_f1 < it_804DC708) {
-//         var_f1 = -var_f1;
-//     }
-//     if (!(var_f1 < it_804DC70C) || (temp_r3->facing_dir == it_804DC708)) {
-//         if (temp_r3->x40_vel.x >= it_804DC708) {
-//             var_f0 = it_804DC710;
-//         } else {
-//             var_f0 = it_804DC714;
-//         }
-//         temp_r3->facing_dir = var_f0;
-//     }
-//     if (it_804DC714 == temp_r3->facing_dir) {
-//         var_r4 = -1;
-//     } else {
-//         var_r4 = 1;
-//     }
-//     mpColl_800436D8(&temp_r3->x378_itemColl, var_r4);
-//     if (((UnkFlagStruct*) ((u8*) temp_r31 + 0xdcb))->bits.b1 == 1) {
-//         temp_f31_2 = (f32) (it_804DC718 * (f64) temp_r31->facing_dir);
-//         if (temp_r29 == NULL) {
-//             __assert("jobj.h", 0x294U, "jobj");
-//         }
-//         if (temp_r29->flags & 0x20000) {
-//             __assert("jobj.h", 0x295U, "!(jobj->flags & JOBJ_USE_QUATERNION)");
-//         }
-//         temp_r29->rotate.y = temp_f31_2;
-//         __80262DE4_inline(temp_r29);
-//     }
-//     if (((it_8026B2B4((Item_GObj*) arg0) == 1) &&
-//          (temp_r0 = temp_r31->hold_kind, ((temp_r0 == 4) == 0)) &&
-//          (temp_r0 != 6)) ||
-//         ((s32) temp_r31->hold_kind == 8))
-//     {
-//         temp_r3_2 = it_80272CC0(
-//             (Item_GObj*) arg0,
-//             ((Item*) arg0->user_data)
-//                 ->xC4_article_data->x10_modelDesc->x8_bone_attach_id);
-//         if (temp_r3_2 == NULL) {
-//             __assert("jobj.h", 0x3D3U, "jobj");
-//         }
-//         sp40 = temp_r3_2->translate;
-//         sp40.x = -sp40.x;
-//         sp40.y = -sp40.y;
-//         sp40.z = -sp40.z;
-//     } else {
-//         sp40.x = sp40.y = sp40.z = it_804DC708;
-//     }
-//     temp_r26_2 = arg0->user_data;
-//     temp_r27_2 = arg0->hsd_obj;
-//     if (&sp40 != NULL) {
-//         lb_8000B1CC(ftLib_80086630((Fighter_GObj*) var_r30, temp_r26_2->xDC4),
-//                     (Vec3*) &sp40, &sp34);
-//     } else {
-//         lb_8000B1CC(ftLib_80086630((Fighter_GObj*) var_r30, temp_r26_2->xDC4),
-//                     NULL, &sp34);
-//     }
-//     temp_r28 = &temp_r26_2->pos;
-//     temp_r26_2->pos.x = sp34.x;
-//     temp_r26_2->pos.y = sp34.y;
-//     temp_r26_2->pos.z = it_804DC708;
-//     if (temp_r27_2 == NULL) {
-//         __assert("jobj.h", 0x394U, "jobj");
-//     }
-//     if (temp_r28 == NULL) {
-//         __assert("jobj.h", 0x395U, "translate");
-//     }
-//     temp_r27_2->translate = *temp_r28;
-//     __80262DE4_inline(temp_r27_2);
-// }
-
-// TODO it_80273F34, scratch: https://decomp.me/scratch/iBS0W
-
 void it_80274198(HSD_GObj* arg0, HSD_GObj* arg1)
 {
     Item* temp_r5;
@@ -4056,39 +3802,6 @@ void it_802741F4(Item_GObj* arg0, s32 arg1)
     }
     it_80273F34(arg0, var_r6, temp_r5);
 }
-
-// TODO 3rd arg for it_80273F34?
-// void it_80274250(HSD_GObj* arg0, Vec3* arg1)
-// {
-//     HSD_GObj* var_r4;
-//     Item* temp_r3;
-//     u8 stack[17];
-
-//     it_80273B50(arg0, arg1);
-//     temp_r3 = arg0->user_data;
-//     var_r4 = temp_r3->owner;
-//     if (((UnkFlagStruct*) temp_r3 + 0xDC8)->bits.b0) {
-//         var_r4 = (HSD_GObj*) temp_r3->x51C;
-//     }
-//     it_80273F34(arg0, var_r4);
-// }
-
-// void it_8027429C(HSD_GObj* arg0, Vec3* arg1)
-// {
-//     HSD_GObj* var_r4;
-//     Item* temp_r3;
-//     u8 stack[17];
-
-//     it_80273B50(arg0, arg1);
-//     temp_r3 = arg0->user_data;
-//     var_r4 = temp_r3->owner;
-//     if (((UnkFlagStruct*) temp_r3 + 0xDC8)->bits.b0) {
-//         var_r4 = (HSD_GObj*) temp_r3->x51C;
-//         temp_r3->owner = var_r4;
-//         temp_r3->x51C = 0;
-//     }
-//     it_80273F34(arg0, var_r4);
-// }
 
 extern f32 it_804DC740;
 

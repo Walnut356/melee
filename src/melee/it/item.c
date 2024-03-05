@@ -2052,7 +2052,7 @@ void Item_8026ABD8(HSD_GObj* gobj, Vec3* pos, f32 arg2)
     it_802731A4(gobj);
     it_80273B50(gobj, pos);
     RunCallback(gobj, item_data->xB8_itemLogicTable->dropped);
-    it_80274198(gobj, 1);
+    it_80274198(gobj, (HSD_GObj*)1);
     it_802754D4(gobj);
 
     if (it_8026B6C8(gobj)) {

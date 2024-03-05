@@ -11,8 +11,13 @@
 #include <placeholder.h>
 
 /* 272CC0 */ HSD_JObj* it_80272CC0(Item_GObj*, enum_t);
+/* 2732E4 */ void it_802732E4(Item*, s32);
 /* 273408 */ void it_80273408(Item_GObj* gobj);
+/* 27349C */ void it_8027349C(Item_GObj*);
+/* 2734B4 */ void it_802734B4(Item_GObj*);
 /* 273670 */ void it_80273670(Item_GObj*, s32, f32);
+/* 273F34 */ void it_80273F34(HSD_GObj*, HSD_GObj*, Item*);
+/* 274990 */ f32 it_80274990(HSD_GObj*);
 /* 274C60 */ void it_80274C60(Item_GObj*);
 /* 274C88 */ void it_80274C88(Item_GObj* gobj);
 /* 274ECC */ void it_80274ECC(Item_GObj* gobj, bool);
@@ -24,6 +29,7 @@
 /* 276CB8 */ void it_80276CB8(Item_GObj* gobj);
 /* 277040 */ bool it_80277040(Item_GObj*);
 /* 27781C */ bool it_8027781C(Item_GObj*);
+/* 2787B4 */ void it_802787B4(void);
 /* 279C48 */ void it_80279C48(Item_GObj*, Article*);
 /* 279FF8 */ void it_80279FF8(Item_GObj*);
 /* 27A09C */ bool it_8027A09C(Item_GObj*);
@@ -37,12 +43,5 @@
 /* 3F23CC */ extern struct ItemLogicTable it_803F23CC[];
 /* 3F3100 */ extern struct ItemLogicTable it_803F3100[118];
 /* 3F4D20 */ extern struct ItemLogicTable it_803F4D20[];
-
-void it_802732E4(Item*, s32);
-void it_802787B4(void);
-void it_8027349C(Item_GObj*);
-void it_802734B4(Item_GObj*);
-f32 it_80274990(HSD_GObj*);
-void it_80273F34(HSD_GObj*, HSD_GObj*, Item*);
 
 #endif
