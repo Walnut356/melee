@@ -24,7 +24,7 @@
 /* 024B1C */ void lbAudioAx_80024B1C(s32, s32);
 /* 024B58 */ void lbAudioAx_80024B58(s32, s32);
 /* 024B94 */ void lbAudioAx_80024B94(int, int);
-/* 024DC4 */ void lbAudioAx_80024DC4(void);
+/* 024DC4 */ void lbAudioAx_80024DC4(s32);
 /* 024FDC */ void lbAudioAx_80024FDC(void);
 /* 024FF4 */ void lbAudioAx_80024FF4(void);
 /* 02500C */ void lbAudioAx_8002500C(s32);

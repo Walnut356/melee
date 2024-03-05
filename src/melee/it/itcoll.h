@@ -6,5 +6,6 @@
 #include "it/item.h"
 
 HSD_GObj* it_8027236C(Item_GObj*);
+void it_8027129C(HSD_GObj*, u32);
 
 #endif

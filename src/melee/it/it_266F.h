@@ -49,7 +49,7 @@
 /* 272460 */ void it_80272460(HitCapsule* hitbox, s32 damage, HSD_GObj* gobj);
 /* 2725D4 */ void it_802725D4(HSD_GObj*);
 /* 272784 */ void it_80272784(HSD_GObj* gobj);
-/* 272818 */ UNK_RET it_80272818(UNK_PARAMS);
+/* 272818 */ s32 it_80272818(Item* arg0);
 /* 272860 */ void it_80272860(Item_GObj*, f32, f32);
 /* 2728C8 */ void it_802728C8(HSD_GObj* gobj);
 /* 272A18 */ void it_80272A18(HSD_JObj* item_jobj);
@@ -75,7 +75,7 @@
 /* 273500 */ void it_80273500(HSD_GObj*, Vec3*);
 /* 273748 */ void it_80273748(HSD_GObj*, Vec3*, Vec3*);
 /* 273B50 */ void it_80273B50(HSD_GObj*, Vec3*);
-/* 274198 */ void it_80274198(HSD_GObj*, s32);
+/* 274198 */ void it_80274198(HSD_GObj*, HSD_GObj*);
 /* 2741F4 */ void it_802741F4(HSD_GObj*, s32);
 /* 27429C */ void it_8027429C(HSD_GObj*, Vec3*);
 /* 2742F4 */ void it_802742F4(HSD_GObj*, HSD_GObj*, u8);
